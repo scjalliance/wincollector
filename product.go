@@ -8,20 +8,20 @@ import (
 
 // Product is an installed program
 type Product struct {
-	Bits            Bits
-	Key             string
-	DisplayName     string
-	DisplayVersion  string
-	Publisher       string
-	Comments        string
-	Contact         string
-	InstallDate     string
-	InstallSource   string
-	InstallLocation string
-	ModifyPath      string
-	UninstallString string
-	URLInfoAbout    string
-	URLUpdateInfo   string
+	Bits            Bits   `firestore:"bits"`
+	Key             string `firestore:"key"`
+	DisplayName     string `firestore:"displayName"`
+	DisplayVersion  string `firestore:"displayVersion"`
+	Publisher       string `firestore:"publisher"`
+	Comments        string `firestore:"comments"`
+	Contact         string `firestore:"contact"`
+	InstallDate     string `firestore:"installDate"`
+	InstallSource   string `firestore:"installSource"`
+	InstallLocation string `firestore:"installLocation"`
+	ModifyPath      string `firestore:"modifyPath"`
+	UninstallString string `firestore:"uninstallString"`
+	URLInfoAbout    string `firestore:"urlInfoAbout"`
+	URLUpdateInfo   string `firestore:"urlUpdateInfo"`
 }
 
 // GetProducts fetches products from the registry
