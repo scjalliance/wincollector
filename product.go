@@ -6,7 +6,7 @@ import (
 	"golang.org/x/sys/windows/registry"
 )
 
-// Product an installed program
+// Product is an installed program
 type Product struct {
 	Bits            Bits
 	Key             string
