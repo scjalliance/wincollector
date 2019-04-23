@@ -8,20 +8,20 @@ import (
 
 // Product is an installed program
 type Product struct {
-	Bits            Bits   `firestore:"bits"`
-	Key             string `firestore:"key"`
-	DisplayName     string `firestore:"displayName"`
-	DisplayVersion  string `firestore:"displayVersion"`
-	Publisher       string `firestore:"publisher"`
-	Comments        string `firestore:"comments"`
-	Contact         string `firestore:"contact"`
-	InstallDate     string `firestore:"installDate"`
-	InstallSource   string `firestore:"installSource"`
-	InstallLocation string `firestore:"installLocation"`
-	ModifyPath      string `firestore:"modifyPath"`
-	UninstallString string `firestore:"uninstallString"`
-	URLInfoAbout    string `firestore:"urlInfoAbout"`
-	URLUpdateInfo   string `firestore:"urlUpdateInfo"`
+	Bits            Bits   `firestore:"bits,omitempty"`
+	Key             string `firestore:"key,omitempty"`
+	DisplayName     string `firestore:"displayName,omitempty"`
+	DisplayVersion  string `firestore:"displayVersion,omitempty"`
+	Publisher       string `firestore:"publisher,omitempty"`
+	Comments        string `firestore:"comments,omitempty"`
+	Contact         string `firestore:"contact,omitempty"`
+	InstallDate     string `firestore:"installDate,omitempty"`
+	InstallSource   string `firestore:"installSource,omitempty"`
+	InstallLocation string `firestore:"installLocation,omitempty"`
+	ModifyPath      string `firestore:"modifyPath,omitempty"`
+	UninstallString string `firestore:"uninstallString,omitempty"`
+	URLInfoAbout    string `firestore:"urlInfoAbout,omitempty"`
+	URLUpdateInfo   string `firestore:"urlUpdateInfo,omitempty"`
 }
 
 // GetProducts fetches products from the registry
